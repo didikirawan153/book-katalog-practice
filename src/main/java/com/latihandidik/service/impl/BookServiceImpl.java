@@ -11,6 +11,12 @@ public class BookServiceImpl implements BookService{
 	private Book book;
 	
 	private BookRepository bookRepository;
+	
+
+	public BookServiceImpl(BookRepository bookRepository) {
+		super();
+		this.bookRepository = bookRepository;
+	}
 
 	@Override
 	public BookDetailDto findBookById(Long id) {
@@ -23,13 +29,13 @@ public class BookServiceImpl implements BookService{
 		return dto;
 	}
 
-	public BookRepository getBookRepository() {
-		return bookRepository;
-	}
-
-	public void setBookRepository(BookRepository bookRepository) {
-		this.bookRepository = bookRepository;
-	}
+//	public BookRepository getBookRepository() {
+//		return bookRepository;
+//	}
+//
+//	public void setBookRepository(BookRepository bookRepository) {
+//		this.bookRepository = bookRepository;
+//	}
 	
 	
 	

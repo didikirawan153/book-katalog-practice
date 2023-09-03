@@ -22,6 +22,8 @@
 		class="com.latihandidik.repository.impl.BookRepositoryImpl"></bean>
 	<!-- Setter injection-->
 	<bean id="bookService" class="com.latihandidik.service.impl.BookServiceImpl">
-		<property name="bookRepository" ref="bookRepository"></property>
+<!--		<property name="bookRepository" ref="bookRepository"></property>-->
+<!--		Change setter injection to constructor injection-->
+		<constructor-arg ref="bookRepository"></constructor-arg>
 	</bean>
 </beans>
