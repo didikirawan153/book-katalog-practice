@@ -26,6 +26,6 @@ public class App
 //        System.out.println(bookDetailDto);
         
         Author author = (Author) appContext.getBean("author");
-        System.out.println("Author : "+author+"oke");
+        System.out.println("Author : "+author+"2");
     }
 }
