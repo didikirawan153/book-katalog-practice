@@ -21,8 +21,11 @@ public class App
 //        System.out.println("ID Author : "+author.getId());
 //        System.out.println("Name Author : "+author.getName());
         
-        BookService bookService = (BookService) appContext.getBean("bookService");
-        BookDetailDto bookDetailDto = bookService.findBookById(1L);
-        System.out.println(bookDetailDto);
+//        BookService bookService = (BookService) appContext.getBean("bookService");
+//        BookDetailDto bookDetailDto = bookService.findBookById(1L);
+//        System.out.println(bookDetailDto);
+        
+        Author author = (Author) appContext.getBean("author");
+        System.out.println("Author : "+author);
     }
 }
