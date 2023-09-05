@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import com.latihandidik.domain.Author;
@@ -13,6 +14,7 @@ import com.latihandidik.repository.impl.BookRepositoryImpl;
 import com.latihandidik.service.BookService;
 import com.latihandidik.service.impl.BookServiceImpl;
 
+@ComponentScan(basePackages = {"com.latihandidik"})
 @Configuration
 public class AppConfig {
 	
@@ -51,8 +53,8 @@ public class AppConfig {
 		return bookRepositoryImpl;
 	}
 	
-	@Bean
-	public BookService bookService(BookRepository bookRepository) {
-		return new BookServiceImpl(bookRepository);
-	}
+//	@Bean
+//	public BookService bookService(BookRepository bookRepository) {
+//		return new BookServiceImpl(bookRepository);
+//	}
 }
